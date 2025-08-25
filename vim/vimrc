@@ -1,7 +1,5 @@
-" ----------------------------------------------------------------------
-" Copyright (c) 2014-2025, Kevin Fisher. All rights reserved.
+" Copyright 2014-2025 Kevin Fisher. All rights reserved.
 " SPDX-License-Identifier: BSD-3-Clause
-" ----------------------------------------------------------------------
 
 if has("autocmd")
     filetype plugin indent on
