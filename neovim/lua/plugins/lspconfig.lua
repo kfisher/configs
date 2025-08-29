@@ -27,9 +27,6 @@ return {
         vim.keymap.set('n', '<leader>r', vim.lsp.buf.rename, { buffer = ev.buf, desc = "LSP Rename" })
         vim.keymap.set({ 'n', 'v' }, '<leader>.', vim.lsp.buf.code_action, { buffer = ev.buf, desc = "LSP Code Action" })
         vim.keymap.set('n', '<leader>R', vim.lsp.buf.references, { buffer = ev.bug, desc = "LSP References" })
-        vim.keymap.set('n', '<leader>f', function()
-          vim.lsp.buf.format { async = true }
-        end, { buffer = ev.buf, desc = "LSP Format" })
         vim.keymap.set('i', '<c-space>', function()
           vim.lsp.completion.get()
         end, { desc = "LSP Completion" })
