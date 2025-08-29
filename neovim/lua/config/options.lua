@@ -23,10 +23,11 @@ vim.opt.complete = ".,w,b,u,t,i"
 -- menu    use a pop-up menu
 -- longest insert only the common text of the matches
 -- preview extra information
-vim.opt.completeopt = "menu,longest,preview"
+-- popup   show extra information in the pop-up menu
+vim.opt.completeopt = "menu,longest,popup"
 
 -- Don't highlight the current line by default.
-vim.opt.cursorline = false
+vim.opt.cursorline = true
 
 -- Folding - disable folding on startup
 vim.opt.foldenable = true

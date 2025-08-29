@@ -1,4 +1,4 @@
 -- Copyright 2025 Kevin Fisher. All rights reserved.
 -- SPDX-License-Identifier: BSD-3-Clause
 
-vim.opt.spell = true
+vim.opt_local.spell = true
