@@ -75,6 +75,9 @@ vim.opt.spell = false
 -- When spellchecking is turned on, use these languages.
 vim.opt.spelllang = "en"
 
+-- When spellchecking is turned on, account for camel cased words.
+vim.opt.spelloptions = "camel"
+
 -- Number of spelling suggestions to display.
 vim.opt.spellsuggest = "5"
 
@@ -94,7 +97,8 @@ vim.opt.splitright = true
 -- %l,%c%V                       line, column
 -- %<                            truncate point (if line is too long)
 -- %P				 file position
-vim.opt.statusline = "%2.2n %f %([%H%M%R%W]%) %= [%Y] [%{strlen(&fenc)?&fenc:'none'}][%l,%c%V] %< [%P]"
+-- vim.opt.statusline = "%2.2n %f %([%H%M%R%W]%) %= [%Y] [%{strlen(&fenc)?&fenc:'none'}][%l,%c%V] %< [%P]"
+vim.opt.statusline = "%f %([%H%M%R%W]%) %= [%Y][%{strlen(&fenc)?&fenc:'none'}][%l,%c%V]%<[%P]"
 
 -- Number of spaces to represent tabs as
 vim.opt.tabstop = 8

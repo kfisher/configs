@@ -4,17 +4,21 @@
 return {
   "neovim/nvim-lspconfig",
   config = function()
+    local capabilities = require('cmp_nvim_lsp').default_capabilities()
+
     vim.lsp.enable("rust_analyzer")
     vim.lsp.config("rust_analyzer", {
+      capabilities = capabilities,
       on_attach = function(client, bufnr)
         -- vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
-        vim.lsp.completion.enable(true, client.id, bufnr, {
-        })
+        vim.lsp.completion.enable(true, client.id, bufnr, {})
       end
     })
+
     vim.api.nvim_create_user_command('ToggleInlays', function()
       vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled({0}),{0}) 
     end, { desc = 'Run my custom function' })
+
     vim.api.nvim_create_autocmd('LspAttach', {
       group = vim.api.nvim_create_augroup('UserLspConfig', {}),
       callback = function(ev)
